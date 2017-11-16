@@ -1,0 +1,8 @@
+<%= simple_form_for @manage, method: :patch do |f| %>
+<%= f.input :name %>
+  <%= f.input :room %>
+  <%= f.input :location %>
+  <%= f.input :phone %>
+  <%= f.input :date %>
+  <%= f.submit 'Update Record', class: 'btn btn-primary' %>
+<% end %>
