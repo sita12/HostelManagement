@@ -1,10 +1,46 @@
-html,
-body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
+$primary-font: 'Open Sans', sans-serif;  
+$footer-height: 45px;
+$secondary-font: 'Dosis', sans-serif;  
+html, body {
+  height: 100%;  
+}
+
+
+.navbar-brand {
+  font-weight: 100; 
+  font-size: 30px;
+  letter-spacing: 2px;
+  
 }
 .style_image{
     height:550px;
     width:100%;
  
+}
+
+.d{
+  padding-top:60px;
+  background-color:#CBE32D;
+ height:300px;
+ width:300px;
+ margin:50px 50px 50px 50px; 
+ 
+ text-align: center;
+}
+
+.panel-default{
+  color:blue;
+  margin: 0 auto;
+}
+
+
+
+
+.a{
+  margin-left:150px;
+}
+
+.b{
+  
+  margin-top:100px;
 }

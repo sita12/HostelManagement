@@ -1,0 +1,40 @@
+<% if user_signed_in? %>
+<h1 style="color: #558C89" class="text-center">Room Record</h1>
+<table class="table" >
+  <thead>
+  
+    <tr>
+      <th>SN</th>
+      <th>Room Number</th>
+      <th>Price</th>
+      <th>Sitter</th>
+
+    </tr>
+  </thead>
+
+
+  <tbody>
+  <tr>
+
+<% @rooms.each do |room| %>
+  <td><%= room.symbol %></td>
+  <td><%= room.number%></td>
+  <td><%= room.price %></td>
+  <td><%= room.sitter %></td>
+  
+
+
+ <td><%= link_to 'Delete', room_path(room), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
+ <td><%= link_to 'Edit', edit_room_path(room), class: 'btn btn-sm btn-success' %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+</div>
+<%else%>
+  
+   <%= image_tag "hostel.jpg", :class => "style_image" %>
+   
+
+<%end%>

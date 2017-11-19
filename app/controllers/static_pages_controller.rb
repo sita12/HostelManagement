@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
-    def record
+    def record1
     end  
+    def record2
+    end    
 end

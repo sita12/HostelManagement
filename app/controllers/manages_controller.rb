@@ -1,16 +1,21 @@
 class ManagesController < ApplicationController
     def index
+
+    end
+    def index1
         @manages = Manage.all
     end  
+
+    
 
       def create    
       @manage = Manage.create(manage_params)
       if @manage.valid?
-         flash[:success] = "Your manage has been posted!"
+         flash[:success] = "Successfully created!"
       else
          flash[:alert] = "Woops! Looks like there has been an error!"
       end
-      redirect_to root_path
+      redirect_to index1_path
       end
 
 	def edit 
@@ -20,8 +25,8 @@ class ManagesController < ApplicationController
   def update
     @manage = Manage.find(params[:id])
     if @manage.update(manage_params)
-      flash[:success] = "The manage has been updated!"
-      redirect_to root_path
+      flash[:success] = "Successfully Updated!"
+      redirect_to index1_path
     else
       flash[:alert] = "Woops! Looks like there has been an error!"
       redirect_to edit_manage_path(params[:id])
@@ -31,8 +36,8 @@ class ManagesController < ApplicationController
   def destroy
     @manage = Manage.find(params[:id])
     @manage.destroy
-    flash[:success] = "The manage was successfully deleted!"
-    redirect_to root_path
+    flash[:success] = "Successfully deleted!"
+    redirect_to index1_path
   end
 	
 	private 

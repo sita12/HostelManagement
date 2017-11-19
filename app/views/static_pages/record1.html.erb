@@ -1,0 +1,20 @@
+<h1 style="color: #558C89" class="text-center"> New Record for Student </h1>
+<div class = "container">
+    <div class = "row">
+      <div class = "col-xs-12 col-md-6 col-md-offset-3">
+<%= simple_form_for Manage.new do |f| %>
+  <%= f.input :name %>
+  <%= f.input :room %>
+  <%= f.input :location %>
+  <%= f.input :phone %>
+  <%= f.input :date %>
+  <%= f.submit 'New Record ', class: 'btn btn-success' %>
+<% end %>
+      </div>
+    </div> 
+</div>     
+
+
+
+
+ 

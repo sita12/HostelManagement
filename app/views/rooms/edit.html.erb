@@ -1,0 +1,8 @@
+<%= simple_form_for @room, method: :patch do |f| %>
+<%= f.input :symbol %>
+  <%= f.input :number%>
+  <%= f.input :price%>
+  <%= f.input :sitter %>
+ 
+  <%= f.submit 'Update Record', class: 'btn btn-primary' %>
+<% end %>

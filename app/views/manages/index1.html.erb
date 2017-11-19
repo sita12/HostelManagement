@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+<h1 style="color: #558C89" class="text-center"> Student Record </h1>
+<table class="table">
+  <thead>
+  
+    <tr>
+      <th>Name</th>
+      <th>Room Number</th>
+      <th>Location</th>
+      <th>Phone Number</th>
+      <th>Entry Date</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+  <tr>
+
+<% @manages.each do |manage| %>
+  <td><%= manage.name %></td>
+  <td><%= manage.room %></td>
+  <td><%= manage.location %></td>
+  <td><%= manage.phone %></td>
+  <td><%= manage.date%></td>
+
+
+ <td><%= link_to 'Delete', manage_path(manage), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: "Are you sure?"} %></td>
+  
+ <td><%= link_to 'Edit', edit_manage_path(manage), class: 'btn btn-sm btn-success' %></td>
+
+  </tr>
+  
+<% end %>
+  </tbody>
+</table>
+
+</div>
+<%else%>
+  
+   <%= image_tag "hostel.jpg", :class => "style_image" %>
+   
+
+<%end%>
